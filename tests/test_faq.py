@@ -33,8 +33,9 @@ class TestFaqPage:
     @pytest.mark.parametrize('question_locator,answer_locator,answer', faq_content)
     def test_check_right_answer(self, question_locator, answer_locator, answer, driver):
         main_page = MainPage(driver)
+        main_page.close_cookie()
         main_page.timeout(question_locator)
         main_page.question_click(question_locator)
         main_page.timeout(answer_locator)
-        real_answer = main_page.get_answer_text(answer_locator)
+        real_answer = str(main_page.get_answer_text(answer_locator))
         assert real_answer == answer

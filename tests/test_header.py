@@ -10,9 +10,10 @@ class TestHeader:
     @allure.title('редирект по клику на лого Яндекс')
     def test_ya_logo_click(self, driver):
         header_page = HeaderPage(driver)
+        header_page.close_cookie()
         header_page.ya_logo_click()
         header_page.switch_to_window()
-        header_page.wait_for_url(YA_REDIRECT_URL)
+        header_page.timeout_url(YA_REDIRECT_URL)
         assert YA_REDIRECT_URL in header_page.get_current_url()
 
     @allure.description('тест проверяет, что при тапе на логотип Самокат в хэдере происходит переход на главную '
@@ -20,6 +21,7 @@ class TestHeader:
     @allure.title('клик по логотипу Самокат в хэдере')
     def test_scooter_logo_click(self, driver):
         header_page = HeaderPage(driver)
+        header_page.close_cookie()
         header_page.order_header_btn_click()
         header_page.scooter_logo_click()
         assert BASE_URL in header_page.get_current_url()
@@ -29,5 +31,6 @@ class TestHeader:
     @allure.title('клик по кнопке Заказать в хэдере')
     def test_order_header_btn_click(self, driver):
         header_page = HeaderPage(driver)
+        header_page.close_cookie()
         header_page.order_header_btn_click()
         assert ORDER_PAGE_URL in header_page.get_current_url()

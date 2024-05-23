@@ -1,26 +1,22 @@
 from locators.main_page_locators import MainPageLocators
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.wait import WebDriverWait
 import allure
 
+from pages.base_page import BasePage
 
-class MainPage:
+
+class MainPage(BasePage):
 
     def __init__(self, driver):
-        self.driver = driver
-
-    @allure.step('клик по кнопке принятия куки')
-    def close_cookie(self):
-        self.driver.find_element(*MainPageLocators.close_cookie_btn).click()
+        super().__init__(driver)
 
     @allure.step('клик по вопросу')
     def question_click(self, locator):
-        self.driver.find_element(*locator).click()
+        self.click_element(locator)
 
     @allure.step('получение текста ответа')
     def get_answer_text(self, locator):
-        return self.driver.find_element(*locator).text
+        return self.get_element_text(locator)
 
-    @allure.step('ожидвание отображения элемента')
-    def timeout(self, locator):
-        WebDriverWait(self.driver, 5).until(expected_conditions.visibility_of_element_located(locator))
+    @allure.step('клик по кнопке принятия куки')
+    def close_cookie(self):
+        self.click_element((MainPageLocators.close_cookie_btn))

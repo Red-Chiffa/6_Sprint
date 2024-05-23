@@ -22,4 +22,4 @@ class MainPageLocators:
     answer7 = (By.XPATH, "//*[@id='accordion__panel-6']/p")  # ответ 7
     answer8 = (By.XPATH, "//*[@id='accordion__panel-7']/p")  # ответ 8
     close_cookie_btn = (By.XPATH, "//button[text() = 'да все привыкли']")  # кнопка принятия куки
-    cookie_button = [By.XPATH, "//*[@id='rcc-confirm-button']"]  # кнопка принятия куки
+    cookie_button = (By.XPATH, "//*[@id='rcc-confirm-button']")  # кнопка принятия куки

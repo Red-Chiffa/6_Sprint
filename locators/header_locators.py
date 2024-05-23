@@ -9,3 +9,4 @@ class HeaderLocators:
                         "//div[contains(@class, 'Header')]/button[text() = 'Статус заказа']"]  # Кнопка Статус заказа
     go_btn = [By.XPATH, "//button[text() = 'Go!']"]  # Кнопка Go!
     order_number_input = [By.XPATH, "//input[@placeholder = 'Введите номер заказа']"]  # поле ввода номера заказа
+    close_cookie_btn = (By.XPATH, "//button[text() = 'да все привыкли']")  # кнопка принятия куки

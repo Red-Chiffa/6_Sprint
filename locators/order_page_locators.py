@@ -2,14 +2,14 @@ from selenium.webdriver.common.by import By
 
 
 class OrderPageLocators:
-    name_input = [By.XPATH, "//input[@placeholder='* Имя']"]  # поле ввода Имени
-    surname_input = [By.XPATH, "//input[@placeholder='* Фамилия']"]  # поле ввода Фамилии
-    adress_input = [By.XPATH, "//input[@placeholder='* Адрес: куда привезти заказ']"]  # поле ввода Адреса
-    metro_input = [By.CLASS_NAME, "select-search__input"]  # дропдаун станиций метро
+    name_input = (By.XPATH, "//input[@placeholder='* Имя']")  # поле ввода Имени
+    surname_input = (By.XPATH, "//input[@placeholder='* Фамилия']")  # поле ввода Фамилии
+    adress_input = (By.XPATH, "//input[@placeholder='* Адрес: куда привезти заказ']")  # поле ввода Адреса
+    metro_input = (By.CLASS_NAME, "select-search__input")  # дропдаун станиций метро
     metro_station_choose = (By.XPATH, "//div[@class = 'select-search__select'][1]")  # выбор станции метро
-    phone_number_input = [By.XPATH,
-                          "//input[@placeholder='* Телефон: на него позвонит курьер']"]  # поле ввода номера телефона
-    next_btn = [By.XPATH, "//button[text() = 'Далее']"]  # кнопка Далее
+    phone_number_input = (By.XPATH,
+                          "//input[@placeholder='* Телефон: на него позвонит курьер']")  # поле ввода номера телефона
+    next_btn = (By.XPATH, "//button[text() = 'Далее']")  # кнопка Далее
     date_input = (By.XPATH, "//input[@placeholder = '* Когда привезти самокат']")  # поле ввода даты доставки
     calendar_choose_day = (
         By.XPATH, "//div[5]/div[contains(@class, 'react-datepicker__day ')][7]")  # выбор даты на календаре
