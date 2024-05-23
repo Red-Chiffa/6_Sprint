@@ -78,3 +78,6 @@ class OrderPage(BasePage):
 
     def close_cookie(self):
         self.click_element((MainPageLocators.close_cookie_btn))
+
+    def check_check_status_btn_is_displayed(self):
+        return self.check_element_is_displayed(OrderPageLocators.check_status)

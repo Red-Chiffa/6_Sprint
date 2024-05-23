@@ -37,4 +37,7 @@ class BasePage:
     def get_element_text(self, locator):
         return self.driver.find_element(*locator).text
 
+    def check_element_is_displayed(self, locator):
+        return self.driver.find_element(*locator).is_displayed()
+
 

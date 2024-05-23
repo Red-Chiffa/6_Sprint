@@ -37,4 +37,4 @@ class TestOrderPage:
         order_page.create_order_btn_click()
         order_page.timeout(OrderPageLocators.confirm_orger_btn)
         order_page.confirm_orger_btn_click()
-        assert driver.find_element(*OrderPageLocators.check_status).is_displayed()
+        assert order_page.check_check_status_btn_is_displayed()
