@@ -1,6 +1,5 @@
 import allure
 from locators.order_page_locators import OrderPageLocators
-from locators.main_page_locators import MainPageLocators
 
 
 from pages.base_page import BasePage
@@ -13,9 +12,7 @@ class OrderPage(BasePage):
 
     @allure.step('клик по кнопке заказать на главной странице')
     def order_btn_main_page_click(self):
-        self.click_element((MainPageLocators.order_btn))
-
-
+        self.click_element((OrderPageLocators.order_btn))
 
     @allure.step('заполнение поля Имя')
     def fill_name(self, name):
@@ -76,8 +73,10 @@ class OrderPage(BasePage):
     def check_status_modal(self):
         self.click_element((OrderPageLocators.check_status))
 
-    def close_cookie(self):
-        self.click_element((MainPageLocators.close_cookie_btn))
-
     def check_check_status_btn_is_displayed(self):
         return self.check_element_is_displayed(OrderPageLocators.check_status)
+
+    def timeout_name_input(self):
+        self.timeout((OrderPageLocators.name_input))
+    def timeout_date_delivery(self):
+        self.timeout((OrderPageLocators.date_input))

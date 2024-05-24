@@ -27,3 +27,5 @@ class OrderPageLocators:
         By.XPATH, "//button[text() = 'Посмотреть статус']")  # кнопка Посмотреть статус на всплывающем сообщении
     cancel_order = (
         By.XPATH, "//button[text() = 'Отменить заказ']")  # кнопка Отменить заказ на странице информации о заказе
+    order_btn = (By.XPATH, "//div[contains(@class, 'Home')]/button[text() = 'Заказать']")  # кнопка Заказать
+    # в блоке Как это работает

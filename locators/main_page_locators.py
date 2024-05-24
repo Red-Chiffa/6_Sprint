@@ -2,8 +2,6 @@ from selenium.webdriver.common.by import By
 
 
 class MainPageLocators:
-    order_btn = (By.XPATH, "//div[contains(@class, 'Home')]/button[text() = 'Заказать']")  # кнопка Заказать
-    # в блоке Как это работает
     faq_section = (By.CLASS_NAME, 'Home_FourPart__1uthg')  # Название раздела Вопросы о важном
     question1 = (By.XPATH, "//div[@data-accordion-component = 'AccordionItem'][1]")  # вопрос 1
     question2 = (By.XPATH, "//div[@data-accordion-component = 'AccordionItem'][2]")  # вопрос 2

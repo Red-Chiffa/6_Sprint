@@ -12,7 +12,6 @@ class BasePage:
     def click_element(self, element):
         self.driver.find_element(*element).click()
 
-    #    @allure.step('получение URL при редиректе')
     @allure.step('переключение на другую страницу по редиректу')
     def switch_to_window(self):
         self.driver.switch_to.window(self.driver.window_handles[1])
@@ -39,5 +38,3 @@ class BasePage:
 
     def check_element_is_displayed(self, locator):
         return self.driver.find_element(*locator).is_displayed()
-
-

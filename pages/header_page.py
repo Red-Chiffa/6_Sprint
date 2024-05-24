@@ -10,19 +10,19 @@ class HeaderPage(BasePage):
 
     @allure.step('клик по логотипу Яндекс в хедере')
     def ya_logo_click(self):
-        super().click_element((HeaderLocators.ya_logo))
+        self.click_element((HeaderLocators.ya_logo))
 
     @allure.step('клик по логотипу Самокат в хедере')
     def scooter_logo_click(self):
-        super().click_element((HeaderLocators.scooter_logo))
+        self.click_element((HeaderLocators.scooter_logo))
 
     @allure.step('клик по кнопке Заказать в хедере')
     def order_header_btn_click(self):
-        super().click_element((HeaderLocators.order_header_btn))
+        self.click_element((HeaderLocators.order_header_btn))
 
     @allure.step('клик по кнопке Статус заказа в хедере')
     def order_status_btn_click(self):
-        super().click_element((HeaderLocators.order_status_btn))
+        self.click_element((HeaderLocators.order_status_btn))
 
     @allure.step('клик по кнопке принятия куки')
     def close_cookie(self):
